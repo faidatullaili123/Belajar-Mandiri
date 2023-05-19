@@ -11,6 +11,11 @@
     
 </head>
 <body>
+    <nav class="navbar bg-body-tertiary">
+    <div class="container">
+     <a class="navbar-brand" href="#">Latihan PHP - Kelompok 2</a>
+    </div>
+    </nav>
 
 <div class="container" ">
 <table  id="mytable" class="display" cellpadding="10" cellspacing="0" class="table table-striped">
@@ -43,7 +48,7 @@
             <td class="text-center"><?php echo $pengarang['alamat'] ?></td>
             <td class="text-center">
             <a  class="btn btn-warning" href="edit.php?id_pengarang=<?= $pengarang['id_pengarang']; ?>">Edit</a>
-            <a  class="btn btn-danger" href="delete.php?id_pengarang=<?= $pengarang['id_pengarang']; ?>">Delete</a>
+            <a  class="btn btn-danger" href="delete.php?id_pengarang=<?= $pengarang['id_pengarang']; ?> " onclick="return confirm('Yakin dihapus')">Delete</a>
         </tr>
         <?php 
             } 
